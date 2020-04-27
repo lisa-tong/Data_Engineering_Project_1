@@ -8,10 +8,11 @@ Apache Spark, SQL, Docker, Airflow, Scala, sbt using the Amazon Web Services pla
 ### Loading DataFrame into Spark
 Initially there were some issues with the csv file due to how the information was collected. There were new lines in cells, arrays had commas embedded in the cell. It would cause some issues parsing the file correctly because the cells would shift unexpectedly and data would not fall under the right columns.
 
+![wrongdatacolumns](https://user-images.githubusercontent.com/48896326/80407661-f7f7be80-8893-11ea-805c-ab2bab578f9e.jpg)
 
 
 To fix this, the following Spark syntax was used:
 
 `val data = spark.read.option("multiLine", true).option("quote", "\"").option("escape", "\"").option("header", "true").option("delimiter", ",").option("treatEmptyValuesAsNulls","true").csv(params.inPath)`
 
-val data = spark.read.option("multiLine", true).option("quote", "\"").option("escape", "\"").option("header", "true").option("delimiter", ",").option("treatEmptyValuesAsNulls","true").csv("/de_programming/data/listings.csv")
+![fixeddatacolumns](https://user-images.githubusercontent.com/48896326/80407670-fd550900-8893-11ea-9582-7e6127cd8c24.jpg)
