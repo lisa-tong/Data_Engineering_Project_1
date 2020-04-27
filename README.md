@@ -17,4 +17,8 @@ To fix this, the following Spark syntax was used:
 
 ![fixeddatacolumns](https://user-images.githubusercontent.com/48896326/80407670-fd550900-8893-11ea-9582-7e6127cd8c24.jpg)
 
+Since full use condos are the only building type considered:
+
+`val filter = newData.where(newData("property_type") === "Condominium" && newData("room_type") === "Entire home/apt").show()`
+
 To be continued as I work on this project :)
