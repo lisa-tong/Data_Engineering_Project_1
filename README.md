@@ -6,7 +6,7 @@ This project will take a large dataset of Airbnb listings in the Greater Toronto
 Apache Spark, SQL, Docker, Airflow, Scala, sbt using the Amazon Web Services platform.
 
 ### Loading DataFrame into Spark
-Initially there were some issues with the csv file due to how the information was collected. There were new lines in cells, arrays had commas embedded in the cell. It would cause some issues parsing the file correctly because the cells would shift unexpectedly and data would not fall under the right columns.
+Initially there were some issues reading the csv file due to how the information was populated. There were new lines in cells and arrays had commas embedded in the cell. It would cause some issues parsing the file correctly because the cells would shift unexpectedly and data would not fall under the right columns.
 
 ![wrongdatacolumns](https://user-images.githubusercontent.com/48896326/80407661-f7f7be80-8893-11ea-805c-ab2bab578f9e.jpg)
 
