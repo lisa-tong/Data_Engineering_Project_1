@@ -3,7 +3,7 @@
 This project will take a large dataset of Airbnb listings in the Greater Toronto Area (GTA) and convert the file from csv to parquet to optimize the size (Phase 1). Once converted, the parquet files will be queried for condos only and integrated into a map UI using the latitudes and longitudes of each listing (Phase 2). The goal of this project is to review the number of Airbnb listings that are in condominium buildings which will help prospective home buyers to determine if it's the right choice for them.
 
 ## Architecture
-![Phase1](https://user-images.githubusercontent.com/48896326/80536731-ce609500-8970-11ea-8143-307ad33ed919.jpg)
+![Phase1(1)](https://user-images.githubusercontent.com/48896326/80536837-05cf4180-8971-11ea-997e-4a44b322c439.jpg)
 
 ## Tools/Languages Used
 Apache Spark, SQL, Docker, Airflow, Scala, sbt using the Amazon Web Services platform.
