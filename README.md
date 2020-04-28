@@ -21,4 +21,12 @@ Since full use condos are the only building type considered:
 
 `val filter = newData.where(newData("property_type") === "Condominium" && newData("room_type") === "Entire home/apt").show()`
 
+Saving to parquet file.
+`filter.write
+        .partitionBy(params.partitionColumn)
+        .options(params.outOptions)
+        .format(params.outFormat)
+        .mode(params.saveMode)
+        .save(params.outPath)`
+
 To be continued as I work on this project :)
