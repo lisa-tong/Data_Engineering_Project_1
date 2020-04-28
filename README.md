@@ -21,14 +21,10 @@ Since full use condos are the only building type considered:
 
 `val filter = newData.where(newData("property_type") === "Condominium" && newData("room_type") === "Entire home/apt").show()`
 
-Saving to parquet file.
-```
-filter.write
-        .partitionBy(params.partitionColumn)
-        .options(params.outOptions)
-        .format(params.outFormat)
-        .mode(params.saveMode)
-        .save(params.outPath)
-```
+The next step would be to run a `sbt clean assembly` to create a jar file for `spark-submit`
+
+We want to get into the bash command in the Docker container running sbt
+
+`docker run -it --rm -p 8080:8080 bigtruedata/sbt bash` then `sbt clean assembly` to create a jar file.
 
 To be continued as I work on this project :)
