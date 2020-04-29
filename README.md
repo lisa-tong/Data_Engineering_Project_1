@@ -30,4 +30,10 @@ We want to get into the bash command in the Docker container running sbt
 
 `docker run -it --rm -p 8080:8080 bigtruedata/sbt bash` then `sbt clean assembly` to create a jar file.
 
+The jar file and source files (csv) can be uploaded in S3 buckets on AWS. A destination folder for the output can also be placed as well.
+
+Start up EC2, and EMR cluster to run the jar file using the `spark-submit` command.
+
+The resulting parquet file will be housed in the destination folder. 
+
 To be continued as I work on this project :)
