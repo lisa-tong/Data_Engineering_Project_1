@@ -32,8 +32,11 @@ We want to get into the bash command in the Docker container running sbt
 
 The jar file and source files (csv) can be uploaded in S3 buckets on AWS. A destination folder for the output can also be placed as well.
 
+![s3bucket](https://user-images.githubusercontent.com/48896326/80928187-35b38600-8d71-11ea-8506-138ca9b0e949.jpg)
+
 Start up EC2, and EMR cluster to run the jar file using the `spark-submit` command.
 
 The resulting parquet file will be housed in the destination folder. 
+
 
 To be continued as I work on this project :)
