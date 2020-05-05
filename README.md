@@ -34,6 +34,8 @@ The jar file and source files (csv) can be uploaded in S3 buckets on AWS. A dest
 
 ![s3bucket](https://user-images.githubusercontent.com/48896326/80928187-35b38600-8d71-11ea-8506-138ca9b0e949.jpg)
 
-EC2 and an EMR cluster would be initiated. The EMR cluster would be pending for instruction from the lambda function. A lambda function was created to handle the event of dropping files into the source bucket. The lambda function initiates the workers in Airflow and the data would be processed through the EMR.
+EC2 and an EMR cluster would be initiated. The EMR cluster would be pending for instruction from the lambda function. A lambda function was created to handle the event of dropping files into the source bucket. The lambda function initiates the workers in Airflow and the data would be processed through the EMR. The S3 bucket would be linked to the Lambda function.
+
+![s3trigger](https://user-images.githubusercontent.com/48896326/81126450-4a2a8680-8f09-11ea-8764-2d2e77e5a15a.jpg)
 
 The resulting parquet file will be housed in the destination folder. 
