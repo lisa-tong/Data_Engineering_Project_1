@@ -34,9 +34,6 @@ The jar file and source files (csv) can be uploaded in S3 buckets on AWS. A dest
 
 ![s3bucket](https://user-images.githubusercontent.com/48896326/80928187-35b38600-8d71-11ea-8506-138ca9b0e949.jpg)
 
-Start up EC2, and EMR cluster to run the jar file using the `spark-submit` command.
+EC2 and an EMR cluster would be initiated. The EMR cluster would be pending for instruction from the lambda function. A lambda function was created to handle the event of dropping files into the source bucket. The lambda function initiates the workers in Airflow and the data would be processed through the EMR.
 
 The resulting parquet file will be housed in the destination folder. 
-
-
-To be continued as I work on this project :)
