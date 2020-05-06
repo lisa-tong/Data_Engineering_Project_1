@@ -32,7 +32,7 @@ We want to get into the bash command in the Docker container running sbt
 
 The jar file and source files (csv) can be uploaded in S3 buckets on AWS. A destination folder for the output can also be placed as well.
 
-![s3bucket](https://user-images.githubusercontent.com/48896326/81202697-f796ac00-8f94-11ea-8830-54da7ff5a09e.jpg)
+![s3bucket-redacted](https://user-images.githubusercontent.com/48896326/81202971-55c38f00-8f95-11ea-883d-f4b4c594d4d8.jpg)
 
 EC2 and an EMR cluster would be initiated. The EMR cluster would be pending for instruction from the lambda function. A lambda function was created to handle the event of dropping files into the source bucket. The lambda function initiates the workers in Airflow and the data would be processed through the EMR. The S3 bucket would be linked to the Lambda function.
 
