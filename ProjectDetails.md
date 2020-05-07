@@ -33,6 +33,7 @@ We want to get into the bash command in the Docker container running sbt
 
 `docker run -it --rm -p 8080:8080 bigtruedata/sbt bash` then `sbt clean assembly` to create a jar file.
 
+### Moving to the cloud (Amazon Web Services)
 The jar file and source files (csv) can be uploaded in S3 buckets on AWS. A destination folder for the output can also be placed as well.
 
 ![s3bucket-redacted](https://user-images.githubusercontent.com/48896326/81202971-55c38f00-8f95-11ea-883d-f4b4c594d4d8.jpg)
@@ -45,6 +46,20 @@ The EMR cluster would be pending for instruction from the lambda function. A lam
 
 ![s3trigger](https://user-images.githubusercontent.com/48896326/81126450-4a2a8680-8f09-11ea-8764-2d2e77e5a15a.jpg)
 
-The resulting parquet file will be housed in the destination folder. The files were separated by id to be easily identified.
+The resulting parquet file will be housed in the destination folder. The files were separated by id to be easily identified. A smaller sample sized was used to demonstrate it the pipeline working.
 
 ![results](https://user-images.githubusercontent.com/48896326/81322787-7574b900-9062-11ea-8d7f-1cd005027323.jpg)
+
+### AWS Glue Crawler
+The Glue Crawler was set up to go to the destination folder.
+
+### AWS Athena
+Athena allowed for queries to be performed. An example query was the following:
+
+`SELECT id, city, latitude, longitude FROM airflow`
+
+To get the following results:
+
+![athena](https://user-images.githubusercontent.com/48896326/81324886-9be82380-9065-11ea-9c74-2aca9c7e375a.jpg)
+
+Phase One Complete!
