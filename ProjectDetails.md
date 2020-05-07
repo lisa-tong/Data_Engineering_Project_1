@@ -63,3 +63,6 @@ To get the following results:
 ![athena](https://user-images.githubusercontent.com/48896326/81324886-9be82380-9065-11ea-9c74-2aca9c7e375a.jpg)
 
 Phase One Complete!
+
+## Future
+The next phase of the project is to plot the latitude/longitude on a map. This would provide insight as to where most short term rentals are located in the Greater Toronto Area.
