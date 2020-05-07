@@ -45,4 +45,6 @@ The EMR cluster would be pending for instruction from the lambda function. A lam
 
 ![s3trigger](https://user-images.githubusercontent.com/48896326/81126450-4a2a8680-8f09-11ea-8764-2d2e77e5a15a.jpg)
 
-The resulting parquet file will be housed in the destination folder. 
+The resulting parquet file will be housed in the destination folder. The files were separated by id to be easily identified.
+
+![results](https://user-images.githubusercontent.com/48896326/81322787-7574b900-9062-11ea-8d7f-1cd005027323.jpg)
