@@ -6,7 +6,9 @@ AWS, Airflow, Docker, Spark, Scala on Linux OS
 
 ## Files
 **ProjectDetails.md** - Details my architecture, thought process, intermediate steps, and results of my data pipleine.
+
 **DAG_file.py** - Instructions for Airflow workers
+
 **ListingJob.scala** - Instructions written in Spark/scala to transform the original csv file to be properly formatted.
 
 ## Project Goals
