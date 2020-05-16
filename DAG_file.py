@@ -48,13 +48,13 @@ SPARK_TEST_STEPS = [
                 '--executor-memory','3g',
                 '--executor-cores','2',
                 's3a://jar-file-location',
-                '-p','wcd-demo',
-                '-i','Csv',
-                '-o','parquet',
-                '-s', "{{ task_instance.xcom_pull('parse_request', key='s3location') }}",
-                '-d','s3a://destination/',
-                '-c','job',
-                '-m','append',
+                '-p','lt-demo', # parser
+                '-i','Listing', # input
+                '-o','parquet', # output
+                '-s', "{{ task_instance.xcom_pull('parse_request', key='s3location') }}", # source file location
+                '-d','s3a://destination/', # destination file location
+                '-c','job', # suffix for file name
+                '-m','append', # save mode
                 '--input-options','header=true'
             ]
         }
