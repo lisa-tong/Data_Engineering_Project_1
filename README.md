@@ -11,5 +11,7 @@ AWS, Airflow, Docker, Spark, Scala on Linux OS
 
 **ListingJob.scala** - Instructions written in Spark/scala to transform the original csv file to be properly formatted.
 
+**listings.csv** - First 30 Airbnb Toronto listings. Data file from [Inside Airbnb](http://insideairbnb.com/get-the-data.html)
+
 ## Project Goals
 The goal of this project is to help potential home owners determine how many short term rentals are located in the building they plan to purchase. 
