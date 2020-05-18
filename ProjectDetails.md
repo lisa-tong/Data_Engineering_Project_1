@@ -11,6 +11,9 @@ The goal of this project is to reduce the file size of the csv file through Amaz
 ## Tools/Languages Used
 Apache Spark, SQL, Docker, Airflow, Scala, sbt using the Amazon Web Services platform.
 
+## Data Source
+Listing data came from [Inside Airbnb](http://insideairbnb.com/get-the-data.html). Data was reduced to the first 100 for demonstration purposes.
+
 ### Loading DataFrame into Spark
 Initially there were some issues reading the csv file due to how the information was populated. There were new lines in cells and arrays had commas embedded in the cell. It would cause some issues parsing the file correctly because the cells would shift unexpectedly and data would not fall under the right columns.
 
